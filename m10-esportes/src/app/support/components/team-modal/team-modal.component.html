@@ -1,0 +1,16 @@
+<div class="content">
+  <img id="close" (click)="closeModal()" src="/assets/icons/x.svg" />
+  <div class="card">
+    <img id="profile-pic" src="{{ content.image }}" />
+    <div class="info">
+      <div class="title">{{ content.name }}</div>
+      <div class="description">{{ content.description }}</div>
+      <div class="icons">
+        <div class="categories" *ngFor="let item of content.categories">
+          <img src="{{ item.slug }}" alt="" />
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

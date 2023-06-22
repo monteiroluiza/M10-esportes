@@ -1,10 +1,41 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { PortalComponent } from './portal.component';
+import { TeamComponent } from './team/team.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: PortalComponent,
+    children: [
+      {
+        path: 'sobre',
+        component: AboutComponent,
+        data: { name: 'Nossa missão' },
+      },
+      {
+        path: 'turmas',
+        component: TeamComponent,
+        data: { name: 'Nossas turmas' },
+      },
+      {
+        path: 'contato',
+        component: ContactComponent,
+        data: { name: 'Contato' },
+      },
+      {
+        path: 'equipe',
+        component: AboutComponent,
+        data: { name: 'Nossa equipe' },
+      },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PortalRoutingModule { }
+export class PortalRoutingModule {}

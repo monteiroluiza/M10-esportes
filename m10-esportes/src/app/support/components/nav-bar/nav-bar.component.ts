@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,11 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.sass'],
   standalone: true
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  navigate(title: string){
+    switch(title){
+      case "sobre":
+        this.router.navigateByUrl("/portal/sobre");
+        break
+      case "turmas":
+        this.router.navigateByUrl("/portal/turmas");
+        break
+      case "contato":
+        this.router.navigateByUrl("/portal/contato");
+        break
+      case "equipe":
+        this.router.navigateByUrl("/portal/equipe");
+        break
+      default:
+        this.router.navigateByUrl("/portal");
+        break
+    }
   }
-
 }

@@ -1,14 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CarouselComponent } from 'src/app/support/components/carousel/carousel.component';
 
 @Component({
   selector: 'app-classes',
   templateUrl: './classes.component.html',
   styleUrls: ['./classes.component.sass'],
-  standalone: true,
-  imports: [CommonModule, CarouselComponent],
 })
 export class ClassesComponent implements OnInit {
   cards = [
@@ -17,7 +13,7 @@ export class ClassesComponent implements OnInit {
   ];
 
   selectedTitle = 'LOREM IPSUN';
-  selectedImgs = [''];
+  selectedImgs = ['','','','','',''];
 
   constructor(private router: ActivatedRoute) {}
 

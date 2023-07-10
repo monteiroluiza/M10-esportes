@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ModalService } from '../modal/service/modal.service';
 
 @Component({
@@ -10,22 +10,19 @@ import { ModalService } from '../modal/service/modal.service';
   imports: [CommonModule],
 })
 export class TeamModalComponent {
-  @Input() name = '';
-  @Input() description = '';
-  @Input() categories = [{ slug: '', name: '' }];
-  @Input() image = '';
+  @Input() info = {
+    name: '',
+    description: '',
+    img: '',
+    categories: [
+      {
+        slug: '',
+        name: '',
+      },
+    ],
+  };
 
-  content: any = {}
   constructor(private modalService: ModalService) {}
-
-  ngOnInit(){
-    this.content = {
-      name: this.name,
-      description: this.description,
-      categories: this.categories,
-      image: this.image,
-    };
-  }
 
   closeModal() {
     this.modalService.close();

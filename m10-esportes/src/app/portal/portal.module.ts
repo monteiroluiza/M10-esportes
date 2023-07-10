@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ClassesComponent } from './classes/classes.component';
 import { NavBarComponent } from '../support/components/nav-bar/nav-bar.component';
+import { CarouselComponent } from '../support/components/carousel/carousel.component';
 
 
 @NgModule({
@@ -15,13 +16,14 @@ import { NavBarComponent } from '../support/components/nav-bar/nav-bar.component
         PortalComponent,
         TeamComponent,
         AboutComponent,
+        ClassesComponent,
         ContactComponent,
     ],
     imports: [
         CommonModule,
         PortalRoutingModule,
         NavBarComponent,
-        ClassesComponent
+        CarouselComponent
     ]
 })
 export class PortalModule { }

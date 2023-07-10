@@ -17,13 +17,13 @@ import { CarouselComponent } from "../support/components/carousel/carousel.compo
         TeamComponent,
         AboutComponent,
         ContactComponent,
-        ClassesComponent
     ],
     imports: [
         CommonModule,
         PortalRoutingModule,
         NavBarComponent,
-        CarouselComponent
+        CarouselComponent,
+        ClassesComponent
     ]
 })
 export class PortalModule { }

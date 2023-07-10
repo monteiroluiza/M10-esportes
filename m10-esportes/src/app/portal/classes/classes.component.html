@@ -3,4 +3,18 @@
   <div id="border"></div>
 </div>
 
-<app-carousel></app-carousel>
+<div class="content">
+  <h2>{{selectedTitle}}</h2>
+  <app-carousel
+    [options]="{
+      uniqueId: 'cards',
+      isArrowsInside: false
+    }"
+  >
+    <div #element *ngFor="let card of selectedImgs" class="card">
+      <div class="box">
+        <img src="card.img">
+      </div>
+    </div>
+  </app-carousel>
+</div>

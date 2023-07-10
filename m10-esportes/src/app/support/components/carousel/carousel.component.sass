@@ -1,0 +1,22 @@
+.container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .carousel
+    display: flex
+    align-items: center
+    overflow: hidden
+    .roll
+      display: flex
+      transition: transform .5s ease-in-out
+  .inside, .outerside
+    cursor: pointer
+    z-index: 1
+    &:first-child
+      margin-right: -3rem
+    &:last-child
+      margin-left: -3rem
+  .banner
+    img
+      filter: none
+

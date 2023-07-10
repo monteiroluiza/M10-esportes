@@ -1,0 +1,44 @@
+<div
+  #container
+  id="{{ options.uniqueId }}"
+  class="container"
+  (window:resize)="initializeWidthCarousel()"
+>
+  <span *ngIf="elements.length > 1" 
+    [ngClass]="{ 
+      banner: options.isBanner,
+      inside: options.isArrowsInside, 
+      outerside: !options.isArrowsInside}"
+    ><img
+      *ngIf="!options.isBanner"
+      (click)="prevElement()"
+      src="assets/icons/arrow-left-carousel.svg"
+    />
+    <img
+    *ngIf="options.isBanner"
+      (click)="prevElement()"
+      src="assets/icons/arrow-left-carousel.svg"
+    />
+  </span>
+  <div class="carousel">
+    <div class="roll">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <span *ngIf="elements.length > 1"
+    [ngClass]="{ 
+      banner: options.isBanner,
+      inside: options.isArrowsInside, 
+      outerside: !options.isArrowsInside}"
+    ><img
+    *ngIf="!options.isBanner"
+      (click)="nextElement()"
+      src="/assets/icons/arrow-right-carousel.svg"
+    />
+    <img
+    *ngIf="options.isBanner"
+      (click)="nextElement()"
+      src="/assets/icons/arrow-right-carousel.svg"
+    />
+  </span>
+</div>

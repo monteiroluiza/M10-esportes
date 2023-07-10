@@ -11,17 +11,17 @@ import { NavBarComponent } from '../support/components/nav-bar/nav-bar.component
 
 
 @NgModule({
-  declarations: [
-    PortalComponent,
-    TeamComponent,
-    AboutComponent,
-    ContactComponent,
-    ClassesComponent
-  ],
-  imports: [
-    CommonModule,
-    PortalRoutingModule,
-    NavBarComponent
-  ]
+    declarations: [
+        PortalComponent,
+        TeamComponent,
+        AboutComponent,
+        ContactComponent,
+    ],
+    imports: [
+        CommonModule,
+        PortalRoutingModule,
+        NavBarComponent,
+        ClassesComponent
+    ]
 })
 export class PortalModule { }

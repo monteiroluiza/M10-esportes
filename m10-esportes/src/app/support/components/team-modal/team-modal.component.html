@@ -1,12 +1,12 @@
 <div class="content">
   <img id="close" (click)="closeModal()" src="/assets/icons/x.svg" />
   <div class="card">
-    <img id="profile-pic" src="{{ content.image }}" />
+    <img id="profile-pic" src="{{ info.img }}" />
     <div class="info">
-      <div class="title">{{ content.name }}</div>
-      <div class="description">{{ content.description }}</div>
+      <div class="title">{{ info.name }}</div>
+      <div class="description">{{ info.description }}</div>
       <div class="icons">
-        <div class="categories" *ngFor="let item of content.categories">
+        <div class="categories" *ngFor="let item of info.categories">
           <img src="{{ item.slug }}" alt="" />
           <p>{{ item.name }}</p>
         </div>

@@ -7,6 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./classes.component.sass'],
 })
 export class ClassesComponent implements OnInit {
+  cards = [
+    { title: 'FUT7', imgs: [''] },
+    { title: 'FUNCIONAL', imgs: [''] },
+  ];
+
+  selectedTitle = 'LOREM IPSUN';
+  selectedImgs = ['','','','','',''];
+
   constructor(private router: ActivatedRoute) {}
 
   get data() {

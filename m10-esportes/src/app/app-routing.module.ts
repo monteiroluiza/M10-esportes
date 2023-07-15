@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
   {
-    path: 'portal',
+    path: '',
     loadChildren: () =>
       import('./portal/portal.module').then((m) => m.PortalModule),
   },

@@ -14,19 +14,19 @@ export class NavBarComponent {
   navigate(title: string){
     switch(title){
       case "sobre":
-        this.router.navigateByUrl("/portal/sobre");
+        this.router.navigateByUrl("/sobre");
         break
       case "turmas":
-        this.router.navigateByUrl("/portal/turmas");
+        this.router.navigateByUrl("/turmas");
         break
       case "contato":
-        this.router.navigateByUrl("/portal/contato");
+        this.router.navigateByUrl("/contato");
         break
       case "equipe":
-        this.router.navigateByUrl("/portal/equipe");
+        this.router.navigateByUrl("/equipe");
         break
       default:
-        this.router.navigateByUrl("/portal");
+        this.router.navigateByUrl("");
         break
     }
   }

@@ -7,7 +7,11 @@ import { NavBarComponent } from './support/components/nav-bar/nav-bar.component'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [NavBarComponent, BrowserModule, AppRoutingModule],
+  imports: [
+    NavBarComponent,
+    BrowserModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
